@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TechStore - Tu Tienda de Tecnología</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#00205B",
+            "background-light": "#F0F2F5",
+            "background-dark": "#111621",
+            "accent": "#FF6F00"
+          },
+          fontFamily: {
+            "display": ["Space Grotesk", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+  </style>
+</head>
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="flex flex-1 justify-center">
+<div class="layout-content-container flex flex-col w-full max-w-7xl flex-1">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 dark:border-gray-700 px-6 md:px-10 py-3 bg-white/80 dark:bg-background-dark/80 backdrop-blur-sm sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined text-3xl">laptop_chromebook</span>
+<h2 class="text-primary text-xl font-bold leading-tight tracking-[-0.015em]">TechStore</h2>
+</div>
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-gray-800 dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary" href="#">Laptops</a>
+<a class="text-gray-800 dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary" href="#">Desktops</a>
+<a class="text-gray-800 dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary" href="#">Accesorios</a>
+<a class="text-gray-800 dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary" href="#">Ofertas</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end items-center gap-4">
+<label class="hidden lg:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-gray-500 dark:text-gray-400 flex bg-gray-100 dark:bg-gray-800 items-center justify-center pl-3 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg text-gray-800 dark:text-gray-200 focus:outline-0 focus:ring-0 border-none bg-gray-100 dark:bg-gray-800 h-full placeholder:text-gray-500 dark:placeholder:text-gray-400 px-4 text-sm font-normal leading-normal" placeholder="Buscar productos..." value=""/>
+</div>
+</label>
+<div class="flex gap-2">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5 hover:bg-gray-200 dark:hover:bg-gray-700">
+<span class="material-symbols-outlined text-xl">person</span>
+</button>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5 hover:bg-gray-200 dark:hover:bg-gray-700">
+<span class="material-symbols-outlined text-xl">favorite</span>
+</button>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5 hover:bg-gray-200 dark:hover:bg-gray-700">
+<span class="material-symbols-outlined text-xl">shopping_cart</span>
+</button>
+</div>
+</div>
+</header>
+<main class="px-4 sm:px-6 md:px-10 py-8">
+<!-- Hero Section -->
+<section class="mb-12">
+<div class="relative w-full h-[450px] bg-center bg-cover rounded-xl flex items-center p-12 text-white" data-alt="A modern, high-performance laptop on a clean desk" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCN0uaPgwJD3scHt79zs08SlPMHvPfDB8-Uc87LRdkKteAI0W88mQpp7GmgxUECJfkDdz9MAtA4-8W1mokzXFbRcvSHonnzyLHGg4sBRqwGRwNbdSioQwhU6DM3Vleh4GWq434LYlJkKveJCDW70F1IRCVUvElcdUVAarcNrW8lSgu9WEBKrCbtJ1CVgi52HFQP1R1kGmaXs6F_S4hkBeE6h5RQRgyc96tlMdZ78iiVOBkwEr5RBuqDHH75fZ8bjUPU9yal-fdxhWc');">
+<div class="absolute inset-0 bg-primary/70 rounded-xl"></div>
+<div class="relative z-10 max-w-xl">
+<h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">La Tecnología del Futuro, Hoy</h1>
+<p class="text-lg mb-8 text-white/90">Descubre nuestra oferta exclusiva en laptops ultra-rápidas, diseñadas para llevar tu productividad al siguiente nivel.</p>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-accent text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-orange-600 transition-colors">
+<span class="truncate">Ver Oferta</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Value Proposition Section -->
+<section class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 text-center">
+<div class="flex flex-col items-center gap-2 p-4 bg-white dark:bg-gray-800 rounded-lg">
+<span class="material-symbols-outlined text-primary text-3xl">local_shipping</span>
+<p class="font-semibold text-sm text-gray-800 dark:text-gray-200">Envío Gratis</p>
+</div>
+<div class="flex flex-col items-center gap-2 p-4 bg-white dark:bg-gray-800 rounded-lg">
+<span class="material-symbols-outlined text-primary text-3xl">verified_user</span>
+<p class="font-semibold text-sm text-gray-800 dark:text-gray-200">Garantía de 2 años</p>
+</div>
+<div class="flex flex-col items-center gap-2 p-4 bg-white dark:bg-gray-800 rounded-lg">
+<span class="material-symbols-outlined text-primary text-3xl">support_agent</span>
+<p class="font-semibold text-sm text-gray-800 dark:text-gray-200">Soporte Técnico 24/7</p>
+</div>
+<div class="flex flex-col items-center gap-2 p-4 bg-white dark:bg-gray-800 rounded-lg">
+<span class="material-symbols-outlined text-primary text-3xl">encrypted</span>
+<p class="font-semibold text-sm text-gray-800 dark:text-gray-200">Pago Seguro</p>
+</div>
+</section>
+<!-- Main Categories Section -->
+<section class="mb-16">
+<h2 class="text-gray-800 dark:text-gray-200 text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-4 pt-5">Categorías Principales</h2>
+<div class="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-6 p-4">
+<div class="flex flex-col gap-3 pb-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg overflow-hidden">
+<div class="w-full h-full bg-center bg-cover transition-transform duration-300 ease-in-out group-hover:scale-105" data-alt="A sleek and modern laptop open on a desk" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC7VGvpDxoaF6rCS-NR9kmX-UlFWGdzOOTUirjzC6aHMxsVygIIiOxRGbNu5RJ5_QvELxjiVtXHezO6BxStt3jsU2qlXuR9ZIwp_D0KMPTsB8cY81LNZklxpRjyEheQudIos-wRWSWursDIPG76QzGOZIaWqtEvcgBDVlaXrVPCsHXqM6GyXT3urq-WHZOaHgSTPQk_xNwalc-Rz7JvT0pcCE2Q_b6A5pFtED3uM94YatCFe1Q5lP6pXAz5f8UbYAr7QZtQhscLv58");'></div>
+</div>
+<div>
+<p class="text-gray-800 dark:text-gray-200 text-base font-medium leading-normal">Laptops</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Para trabajar y estudiar</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg overflow-hidden">
+<div class="w-full h-full bg-center bg-cover transition-transform duration-300 ease-in-out group-hover:scale-105" data-alt="A powerful gaming PC with glowing neon lights" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCsFce3U6EHbHuaOeq3NgWYuKqNg1W1XsRvrP4t5WKfkAJ3HVDwxmOBQFkLPGcOd0AIfNkuFoTswqHrXhHZZufPbJSfUkNipbm9XJJJYRYlfMEwzUlIi5vwkVv2Rk51q8Kl_sj5dT4uovVrRjJwpOoW5yqG8umOrZDngfLDgM0kmcPb89RfWqJU0NDHORT4NUgllcRlVaHDOUUdFDtZfsDUByiDCNU_wrpFJBdtrkA0dUia2P-in63yCee15hF00yDhbTvg_89vt1Q");'></div>
+</div>
+<div>
+<p class="text-gray-800 dark:text-gray-200 text-base font-medium leading-normal">PC Gaming</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Máximo rendimiento</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg overflow-hidden">
+<div class="w-full h-full bg-center bg-cover transition-transform duration-300 ease-in-out group-hover:scale-105" data-alt="A professional workstation computer setup with multiple monitors" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDiHbtUS1kkqk1tfMrZ9-YCpHPsZkseOhrPUh1xoSPyp__ch8HaE6R1trUFBnNF8FDzsgNTe5dNxXW4cnKJSWLYtLKQjWWhVQ9ShursD6DFotVh9BiXdU0cfd07ofnpySN89DzL9c2YQllvDcvq2auhmUbepZw_6NkhgPYNV1mKludesIbQ-8dJ2sbsIKgg6Q4iLXbECf5Zj8XJZUjPoylF687zRvhx2AoDBXihe4bkTyHI_T10lRcMN48mKvLEZS_d9ZFH5WhsQcU");'></div>
+</div>
+<div>
+<p class="text-gray-800 dark:text-gray-200 text-base font-medium leading-normal">Workstations</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Potencia profesional</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg overflow-hidden">
+<div class="w-full h-full bg-center bg-cover transition-transform duration-300 ease-in-out group-hover:scale-105" data-alt="A high-resolution computer monitor displaying a colorful image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB8lCo88sg6kWbIVhUTN62MuJXI06ChqgdYGIbgR8IeJCMc1NdiMCKC0q_bpaT4Rh-PpEuQ5aHnQHRyvrQe_ePJ1oih4KFtCA7fgR5x3bR5V4WNYo03SeGItZdeCGOELH93H_ofdgtWKsw8mybNlKfiRjDCtDF_cu_yNfVO1626OvWx1Nrev3dlzlJtQdY44JQe0mW7hQUD5EU8hEExG-dZrq8e7sh701jeNrk5lCIT3tnuQHN3PeBxCi9ml7mQ4xA6q3Hd3OnxS9E");'></div>
+</div>
+<div>
+<p class="text-gray-800 dark:text-gray-200 text-base font-medium leading-normal">Monitores</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Calidad de imagen superior</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Products Section -->
+<section class="mb-16">
+<h2 class="text-gray-800 dark:text-gray-200 text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-4 pt-5">Productos Destacados</h2>
+<div class="flex overflow-x-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<div class="flex items-stretch p-4 gap-6">
+<!-- Product Card 1 -->
+<div class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-white dark:bg-gray-800 shadow-sm min-w-64 group">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-t-xl overflow-hidden" data-alt="Laptop Pro X1 on a clean white background">
+<div class="w-full h-full bg-center bg-contain bg-no-repeat transition-transform duration-300 ease-in-out group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBBG3Prp6q2-9MKbDiIKjEn_eU6UxFWP3DkX5LTJNxjfEUYI_rsL_9gMXJZgzdFoAjEakQ27IMRMpV0dKzcTtmuNEJ3kKF9CFcWBmWcxbTv6oaOGsVvsgzV181HU-fjCO6uS6YF8ECf809mN716EbFqz-VG6103NqZKf73BSWcrxicdlUP9sYR38eUEWBLCIgTtA1Cxot3EyJPHLNFmXkSX8JMwpthTlBc8Kbo-cmOS4--O0ewXmRfRpbgE8c0RhjHiWF4L1g1Lf9Q');"></div>
+</div>
+<div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+<div>
+<p class="text-gray-800 dark:text-gray-200 text-base font-medium leading-normal">Laptop Pro X1</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">$1,299.00</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 text-primary text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary hover:text-white transition-colors">
+<span class="truncate">Añadir al Carrito</span>
+</button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-white dark:bg-gray-800 shadow-sm min-w-64 group">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-t-xl overflow-hidden" data-alt="PC Gamer Titan Z with glowing internals">
+<div class="w-full h-full bg-center bg-contain bg-no-repeat transition-transform duration-300 ease-in-out group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBBG3Prp6q2-9MKbDiIKjEn_eU6UxFWP3DkX5LTJNxjfEUYI_rsL_9gMXJZgzdFoAjEakQ27IMRMpV0dKzcTtmuNEJ3kKF9CFcWBmWcxbTv6oaOGsVvsgzV181HU-fjCO6uS6YF8ECf809mN716EbFqz-VG6103NqZKf73BSWcrxicdlUP9sYR38eUEWBLCIgTtA1Cxot3EyJPHLNFmXkSX8JMwpthTlBc8Kbo-cmOS4--O0ewXmRfRpbgE8c0RhjHiWF4L1g1Lf9Q');"></div>
+</div>
+<div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+<div>
+<p class="text-gray-800 dark:text-gray-200 text-base font-medium leading-normal">PC Gamer Titan Z</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">$2,499.00</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 text-primary text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary hover:text-white transition-colors">
+<span class="truncate">Añadir al Carrito</span>
+</button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-white dark:bg-gray-800 shadow-sm min-w-64 group">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-t-xl overflow-hidden" data-alt="Ultra-thin laptop on a minimalist desk">
+<div class="w-full h-full bg-center bg-contain bg-no-repeat transition-transform duration-300 ease-in-out group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBBG3Prp6q2-9MKbDiIKjEn_eU6UxFWP3DkX5LTJNxjfEUYI_rsL_9gMXJZgzdFoAjEakQ27IMRMpV0dKzcTtmuNEJ3kKF9CFcWBmWcxbTv6oaOGsVvsgzV181HU-fjCO6uS6YF8ECf809mN716EbFqz-VG6103NqZKf73BSWcrxicdlUP9sYR38eUEWBLCIgTtA1Cxot3EyJPHLNFmXkSX8JMwpthTlBc8Kbo-cmOS4--O0ewXmRfRpbgE8c0RhjHiWF4L1g1Lf9Q');"></div>
+</div>
+<div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+<div>
+<p class="text-gray-800 dark:text-gray-200 text-base font-medium leading-normal">AeroBook Ultra</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">$999.00</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 text-primary text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary hover:text-white transition-colors">
+<span class="truncate">Añadir al Carrito</span>
+</button>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="flex h-full flex-1 flex-col gap-4 rounded-xl bg-white dark:bg-gray-800 shadow-sm min-w-64 group">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-t-xl overflow-hidden" data-alt="A 4K monitor displaying a vibrant landscape">
+<div class="w-full h-full bg-center bg-contain bg-no-repeat transition-transform duration-300 ease-in-out group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBBG3Prp6q2-9MKbDiIKjEn_eU6UxFWP3DkX5LTJNxjfEUYI_rsL_9gMXJZgzdFoAjEakQ27IMRMpV0dKzcTtmuNEJ3kKF9CFcWBmWcxbTv6oaOGsVvsgzV181HU-fjCO6uS6YF8ECf809mN716EbFqz-VG6103NqZKf73BSWcrxicdlUP9sYR38eUEWBLCIgTtA1Cxot3EyJPHLNFmXkSX8JMwpthTlBc8Kbo-cmOS4--O0ewXmRfRpbgE8c0RhjHiWF4L1g1Lf9Q');"></div>
+</div>
+<div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+<div>
+<p class="text-gray-800 dark:text-gray-200 text-base font-medium leading-normal">VisionPro Monitor 4K</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">$799.00</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 text-primary text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary hover:text-white transition-colors">
+<span class="truncate">Añadir al Carrito</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Special Offers Section -->
+<section class="mb-12">
+<div class="bg-primary text-white rounded-xl flex flex-col md:flex-row items-center gap-8 p-12 overflow-hidden relative">
+<div class="md:w-1/2 z-10">
+<h2 class="text-3xl font-bold mb-3">Ofertas de Fin de Temporada</h2>
+<p class="mb-4 text-white/90">Aprovecha descuentos de hasta 30% en equipos seleccionados. ¡No te quedes fuera!</p>
+<div class="flex items-center gap-4 mb-6">
+<div class="text-center"><div class="text-3xl font-bold">08</div><span class="text-xs">DÍAS</span></div>
+<div class="text-center"><div class="text-3xl font-bold">14</div><span class="text-xs">HRS</span></div>
+<div class="text-center"><div class="text-3xl font-bold">32</div><span class="text-xs">MIN</span></div>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-accent text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-orange-600 transition-colors">
+<span class="truncate">Ver todas las ofertas</span>
+</button>
+</div>
+<div class="md:w-1/2 flex justify-center items-center z-10">
+<img class="max-w-xs md:max-w-sm rounded-lg shadow-2xl transform md:rotate-6" data-alt="A complete gaming setup with computer, monitor, and accessories" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOQJCOS0aGoSF8nZXjjTP2nKB5hA-_OfiE3_OZiBod2BSnK8A8wakcjdk84qVI0NbN4KGKPxZuCRdG4Ca5QezSeMRVwjK0v6dCwjxXhR5EjeTiivrej-3lp-1E8TO3zuilkYwnUu94oc-YPr4KvzHMrgOYA7IAQPv2peEs3qXd5VwhiKjCmAD1dNqbZmgIArVAS3fWdE1QvWCX5pzUZw5ff9QG-2zxHUgQtFA5ldCIIs3cKMgnJ6OPZcCmSZEHnxXzz7BqMrN237E"/>
+</div>
+<div class="absolute -bottom-1/4 -right-1/4 w-96 h-96 bg-white/10 rounded-full"></div>
+<div class="absolute top-1/2 -left-20 w-64 h-64 bg-white/5 rounded-full"></div>
+</div>
+</section>
+</main>
+<footer class="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-auto">
+<div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-10">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div>
+<h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 tracking-wider uppercase">Nosotros</h3>
+<ul class="mt-4 space-y-4">
+<li><a class="text-base text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="#">Sobre TechStore</a></li>
+<li><a class="text-base text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="#">Contacto</a></li>
+<li><a class="text-base text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="#">FAQs</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 tracking-wider uppercase">Políticas</h3>
+<ul class="mt-4 space-y-4">
+<li><a class="text-base text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="#">Términos y Condiciones</a></li>
+<li><a class="text-base text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="#">Política de Privacidad</a></li>
+<li><a class="text-base text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="#">Política de Devoluciones</a></li>
+</ul>
+</div>
+<div class="col-span-2 md:col-span-2">
+<h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 tracking-wider uppercase">Suscríbete a nuestro boletín</h3>
+<p class="mt-4 text-base text-gray-600 dark:text-gray-300">Recibe las últimas ofertas y novedades directamente en tu correo.</p>
+<form class="mt-4 sm:flex sm:max-w-md">
+<label class="sr-only" for="email-address">Email address</label>
+<input autocomplete="email" class="form-input appearance-none min-w-0 w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm py-2 px-4 text-base text-gray-900 dark:text-gray-200 placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-primary focus:border-primary" id="email-address" name="email-address" placeholder="Introduce tu email" required="" type="email"/>
+<div class="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
+<button class="w-full bg-primary flex items-center justify-center border border-transparent rounded-md py-2 px-4 text-base font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary" type="submit">Suscribirse</button>
+</div>
+</form>
+</div>
+</div>
+<div class="mt-8 border-t border-gray-200 dark:border-gray-700 pt-8 flex items-center justify-between">
+<p class="text-base text-gray-500 dark:text-gray-400">© 2024 TechStore. Todos los derechos reservados.</p>
+<div class="flex space-x-6">
+<!-- Social icons can be added here -->
+</div>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</div>
+</div>
+</body></html>
